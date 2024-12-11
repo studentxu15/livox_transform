@@ -1,0 +1,11 @@
+<launch>
+   <arg name="project" default="livox_transform" />
+   <node pkg="livox_transform" type="livox_transform" name="livox_transform_front" output="screen" respawn="true">
+      <rosparam subst_value="true">
+         livox_raw_message_name: "/mid360_front"
+         livox_points_message_name: "/mid360_front_t"
+         livox_frame: "base_laser"
+         livox_TR: [0.621, -0.670, 0.0, 0.0, 0.0, 0.785398163]                       
+      </rosparam>
+   </node>
+</launch>
